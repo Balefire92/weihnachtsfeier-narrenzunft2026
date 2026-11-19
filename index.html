@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Teile deine Aufgabe von der Weihnachtsfeier 2026.">
+  <title>Weihnachtsfeier 2026 – Fotoaufgabe</title>
+  <style>
+    :root {
+      --green-deep: #173f2b;
+      --green: #28613b;
+      --green-light: #a8c96a;
+      --green-pale: #eaf0d8;
+      --yellow: #f0cf58;
+      --yellow-soft: #f7e7a7;
+      --red: #a83e36;
+      --ink: #24352a;
+      --muted: #647565;
+      --cream: #f7f5e9;
+      --white: #fffef8;
+      --line: rgba(40, 97, 59, .22);
+      --shadow: 0 24px 70px rgba(14, 45, 27, .22);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 28px 18px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 12% 12%, rgba(168, 201, 106, .28), transparent 36%),
+        radial-gradient(ellipse at 88% 88%, rgba(240, 207, 88, .22), transparent 36%),
+        linear-gradient(145deg, #102e20, var(--green-deep) 55%, #244d31);
+    }
+
+    .page {
+      position: relative;
+      width: min(100%, 540px);
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 56px) clamp(22px, 6vw, 52px) 34px;
+      text-align: center;
+      background: rgba(255, 254, 248, .97);
+      border: 2px solid var(--yellow);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .page::before,
+    .page::after {
+      content: "✦";
+      position: absolute;
+      color: var(--green-light);
+      font-size: 27px;
+      opacity: .95;
+    }
+
+    .page::before { top: 22px; left: 24px; }
+    .page::after { top: 22px; right: 24px; }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto 18px;
+      color: var(--yellow);
+      font-size: 21px;
+      text-shadow: 0 1px 0 #947a27;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      width: 48px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green-deep);
+      font-size: clamp(38px, 9vw, 54px);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .year {
+      display: block;
+      margin-top: 5px;
+      color: var(--red);
+      font-size: clamp(24px, 6vw, 31px);
+      letter-spacing: .18em;
+      font-weight: 400;
+    }
+
+    .date {
+      margin: 20px 0 0;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      max-width: 360px;
+      margin: 27px auto 30px;
+      color: #58685a;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .actions {
+      display: grid;
+      gap: 13px;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: flex;
+      min-height: 60px;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 16px 20px;
+      border: 1px solid var(--green);
+      border-radius: 14px;
+      color: var(--white);
+      background: linear-gradient(135deg, #397747, var(--green-deep));
+      box-shadow: 0 8px 18px rgba(23, 63, 43, .18);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(23, 63, 43, .25);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
+
+    .button.secondary {
+      color: var(--green-deep);
+      background: var(--green-pale);
+      border: 1px solid var(--green-light);
+      box-shadow: none;
+    }
+
+    .button.secondary:hover { background: #dfe9c5; }
+
+    .button svg {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 auto;
+    }
+
+    .hint {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 19px;
+      border-top: 1px solid var(--line);
+      color: var(--green);
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .footer span { color: var(--red); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">Gemeinsam feiern · Gemeinsam erinnern</p>
+    <div class="ornament" aria-hidden="true">❄</div>
+
+    <h1>Weihnachtsfeier Narrenzunft Buhneschäfe Zunsweier e.V.<span class="year">2026</span></h1>
+    <p class="date">Freitag, 20. November 2026</p>
+
+    <p class="intro">
+      Schön, dass du dabei bist! Stelle dich der Aufgabe und teile den Erfolg.
+    </p>
+
+    <nav class="actions" aria-label="Fotoaktionen">
+      <!-- UPLOAD_LINK durch den Synology-Photos-Photo-Request-Link ersetzen. -->
+      <a class="button" href="https://NAS-DS214se.quickconnect.to/mo/request/m7eBIZWdp" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5"/>
+          <path d="M5 14.5v4A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-4"/>
+        </svg>
+        Fotos hochladen
+      </a>
+
+      <!-- GALERIE_LINK durch den öffentlichen Synology-Album-Link ersetzen. -->
+      <a class="button secondary" href="https://NAS-DS214se.quickconnect.to/mo/sharing/bmNlk8Qyr" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16" rx="2"/>
+          <circle cx="8.5" cy="9" r="1.5"/>
+          <path d="m21 15-5-5L5 20"/>
+        </svg>
+        Alle Fotos ansehen
+      </a>
+    </nav>
+
+    <p class="hint">
+      Wähle „Fotos hochladen“, um deine Bilder beizusteuern.
+      In der Galerie kannst du die Fotos aller Gäste ansehen.
+    </p>
+
+    <footer class="footer">
+      Wo de luegesch in alli Häfe - iwwerall hett's Buhneschäfe. <span>✦</span>
+    </footer>
+  </main>
+</body>
+</html>
